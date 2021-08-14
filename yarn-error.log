@@ -1,0 +1,46 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\hossa\.yarn\releases\yarn-1.22.10.cjs add express bcryptjs passport passport-local ejs express-ejs-layout mongoose connect-flash express-session
+
+PATH: 
+  C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Python39\Scripts\;C:\Python39\;C:\Windows\System32;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Program Files\Git\cmd;C:\Users\hossa\AppData\Local\Microsoft\WindowsApps;C:\Users\hossa\AppData\Roaming\npm;C:\Users\hossa\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\hossa\.dotnet\tools;C:\Program Files\Azure Data Studio\bin;C:\platform-tools;C:\Program Files\Git\bin;C:\Program Files\Git\bin\git.exe;C:\composer;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\dotnet\;C:\Program Files\Java\jdk-16.0.1\bin;C:\src\flutter\bin;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\JetBrains\PyCharm Community Edition 2021.1\bin;C:\xampp\php;C:\Users\hossa\AppData\Roaming\Composer\vendor\bin;C:\Users\hossa\AppData\Local\GitHubDesktop\bin
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  14.17.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/express-ejs-layout: Not found
+      at Request.params.callback [as _callback] (C:\Users\hossa\.yarn\releases\yarn-1.22.10.cjs:78518:18)
+      at Request.self.callback (C:\Users\hossa\.yarn\releases\yarn-1.22.10.cjs:135160:22)
+      at Request.emit (events.js:376:20)
+      at Request.<anonymous> (C:\Users\hossa\.yarn\releases\yarn-1.22.10.cjs:136132:10)
+      at Request.emit (events.js:376:20)
+      at IncomingMessage.<anonymous> (C:\Users\hossa\.yarn\releases\yarn-1.22.10.cjs:136054:12)
+      at Object.onceWrapper (events.js:482:28)
+      at IncomingMessage.emit (events.js:388:22)
+      at endReadableNT (internal/streams/readable.js:1336:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+
+npm manifest: 
+  {
+    "name": "node-passport-login",
+    "version": "1.0.0",
+    "description": "Passport authentication with node mongoDB",
+    "main": "index.js",
+    "scripts": {
+      
+    },
+    "author": "Shahrier hossain",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
