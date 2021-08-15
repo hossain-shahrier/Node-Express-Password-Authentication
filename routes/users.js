@@ -2,6 +2,8 @@ const express = require("express");
 
 const router = express.Router();
 const bcrypt = require("bcryptjs");
+const passport = require("passport");
+
 // User model
 const User = require("../models/User");
 // Login page
@@ -41,7 +43,7 @@ router.post("/register", (req, res) => {
     // Validation passed
     User.findOne({ email: email }).then((user) => {
       if (user) {
-        // User exist
+        //if User exist
         errors.push({ message: "Email is already registered" });
         res.render("register", {
           errors,
@@ -51,6 +53,7 @@ router.post("/register", (req, res) => {
           password2,
         });
       } else {
+        // If not
         const newUser = new User({
           name,
           email,
@@ -67,6 +70,10 @@ router.post("/register", (req, res) => {
             newUser
               .save()
               .then((user) => {
+                req.flash(
+                  "success_msg",
+                  "You are now registered and can log in"
+                );
                 res.redirect("./login");
               })
               .catch((err) => console.error(err));
@@ -76,5 +83,12 @@ router.post("/register", (req, res) => {
     });
   }
 });
-
+// Login Handle
+router.post("/login", (req, res, next) => {
+  passport.authenticate("local", {
+    successRedirect: "/dashboard",
+    failureRedirect: "/users/login",
+    failureFlash: true,
+  })(req, res, next);
+});
 module.exports = router;
